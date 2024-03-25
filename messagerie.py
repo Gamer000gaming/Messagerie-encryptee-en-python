@@ -58,10 +58,10 @@ def login(username, password):
 
     if username not in users or users[username]["password"] != password:
         print("Nom d'utilisateur ou mot de passe incorrect.")
-        return None
+        return False
 
     print("Connexion réussie.")
-    return username
+    return True
 
 # Fonction principale de l'application
 def main():
@@ -85,18 +85,18 @@ def main():
             user = login(username, password)
             if user:
                 print(f"Bienvenue, {user}!")
-            while True:
-                conv.seek(0)  # Réinitialise la position du curseur au début du fichier de conversation
-                for line in conv.readlines():
-                    decrypted_line = decrypt(base64.urlsafe_b64decode(line), open("key.txt", "rb").read())
-                    print(decrypted_line)
-                msg = input("Que voulez-vous envoyer? ")
-                if msg == "q": break
-                elif msg != "":
-                    msg = f"{username} : {msg}"
-                    crypt_msg = base64.urlsafe_b64encode(encrypt(msg.encode('utf-8'), open("key.txt", "rb").read())).decode('utf-8')
+                while True:
+                    conv.seek(0)  # Réinitialise la position du curseur au début du fichier de conversation
+                    for line in conv.readlines():
+                        decrypted_line = decrypt(base64.urlsafe_b64decode(line), open("key.txt", "rb").read())
+                        print(decrypted_line)
+                    msg = input("Que voulez-vous envoyer? ")
+                    if msg == "q": break
+                    elif msg != "":
+                        msg = f"{username} : {msg}"
+                        crypt_msg = base64.urlsafe_b64encode(encrypt(msg.encode('utf-8'), open("key.txt", "rb").read())).decode('utf-8')
 
-                    conv.write(crypt_msg + '\n')  # Ajoutez un retour à la ligne entre chaque message
+                        conv.write(crypt_msg + '\n')  # Ajoutez un retour à la ligne entre chaque message
                 
         elif choice == "3":
             print("Au revoir !")
