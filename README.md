@@ -8,4 +8,4 @@ Prochainement ajouté:
  - Interface graphique.
 
 Bugs connus:
- - Bug permettant de se connecter au compte sans mot de passe.
+ - Aucun en 1.0.1
