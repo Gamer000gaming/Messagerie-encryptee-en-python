@@ -8,3 +8,8 @@ Prochainement ajouté:
 
 Bugs connus:
  - Aucun en 1.1.0
+
+Captures d'écran:
+
+![Sans titre](https://github.com/Gamer000gaming/Messagerie-encryptee-en-python/assets/154331650/b5575b72-f00c-4213-bc6a-0febf5bb5616)
+![Sans titrea](https://github.com/Gamer000gaming/Messagerie-encryptee-en-python/assets/154331650/39934f4f-5bfc-4c17-9143-cbfbf3630900)
