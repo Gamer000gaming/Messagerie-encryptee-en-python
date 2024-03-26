@@ -8,4 +8,4 @@ Prochainement ajouté:
  - Interface graphique.
 
 Bugs connus:
- - Aucun en 1.0.1
+ - N'affiche pas le nom d'utilisateur
